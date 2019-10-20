@@ -1,46 +1,26 @@
-<style>
-	h1, figure, p {
-		text-align: center;
-		margin: 0 auto;
-	}
+<script>
+	import { fly } from 'svelte/transition';
+	import { onMount } from 'svelte';
 
-	h1 {
-		font-size: 2.8em;
-		text-transform: uppercase;
-		font-weight: 700;
-		margin: 0 0 0.5em 0;
-	}
+	let show = false;
 
-	figure {
-		margin: 0 0 1em 0;
-	}
-
-	img {
-		width: 100%;
-		max-width: 400px;
-		margin: 0 0 1em 0;
-	}
-
-	p {
-		margin: 1em auto;
-	}
-
-	@media (min-width: 480px) {
-		h1 {
-			font-size: 4em;
-		}
-	}
-</style>
+	onMount(() => {
+		show = true;
+	});
+</script>
 
 <svelte:head>
 	<title>Sapper project template</title>
 </svelte:head>
 
-<h1>Great success!</h1>
 
-<figure>
-	<img alt='Borat' src='great-success.png'>
-	<figcaption>HIGH FIVE!</figcaption>
-</figure>
+<div class="bg-black">
+	<img src="coding-bg.png" alt="" class="relative h-screen object-cover opacity-25"/>
 
-<p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>
+	<div class="absolute top-0 left-0 h-screen pt-32 p-20">
+		{#if show}
+			<p class="font-viga text-white text-6xl items-center" in:fly="{{x: -600, duration: 800}}">Hi, <br/> I'm Raka Khairil <br/> and <br/> I'm a frontend developer.</p>
+		{/if}
+	</div>
+</div>
+
