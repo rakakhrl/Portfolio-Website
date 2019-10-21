@@ -1,11 +1,45 @@
 <script>
 	export let segment;
 
-	$: homeSegment = segment === undefined;
+	const pages = [
+		{
+			'name': 'Home',
+			'path': '.',
+			'segment': undefined
+		},
+		{
+			'name': 'Projects',
+			'path': 'projects',
+			'segment': 'projects'
+		},
+		{
+			'name': 'Skills',
+			'path': 'skills',
+			'segment': 'skills'
+		},
+		{
+			'name': 'Contact Me',
+			'path': 'contact',
+			'segment': 'contact'
+		}
+	];
 </script>
 
 <nav class="bg-white h-screen w-1/3 p-20">
-	<div class:bg-green={homeSegment} class:text-white={homeSegment} class:text-black={!homeSegment} class:pr-4={homeSegment} class="p-0 mb-6">
-		<a class='block text-4xl text-right font-viga' href='.'>Home</a>
-	</div>
+	{#each pages as page}
+		<div 
+			class:bg-green={segment === page.segment} 
+			class:text-white={segment === page.segment} 
+			class:text-black={segment != page.segment} 
+			class:pr-4={segment === page.segment} 
+			class="p-0 mb-6"
+		>
+			<a 
+				class='block text-4xl text-right font-viga' 
+				href={page.path}
+			>
+				{page.name}
+			</a>
+		</div>
+	{/each}
 </nav>
