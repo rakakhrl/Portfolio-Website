@@ -1478,6 +1478,10 @@ video {
   font-family: Viga, sans-serif;
 }
 
+.font-roboto {
+  font-family: Roboto, sans-serif;
+}
+
 .font-hairline {
   font-weight: 100;
 }
@@ -5326,6 +5330,10 @@ video {
 
   .sm\:font-viga {
     font-family: Viga, sans-serif;
+  }
+
+  .sm\:font-roboto {
+    font-family: Roboto, sans-serif;
   }
 
   .sm\:font-hairline {
@@ -9179,6 +9187,10 @@ video {
     font-family: Viga, sans-serif;
   }
 
+  .md\:font-roboto {
+    font-family: Roboto, sans-serif;
+  }
+
   .md\:font-hairline {
     font-weight: 100;
   }
@@ -13030,6 +13042,10 @@ video {
     font-family: Viga, sans-serif;
   }
 
+  .lg\:font-roboto {
+    font-family: Roboto, sans-serif;
+  }
+
   .lg\:font-hairline {
     font-weight: 100;
   }
@@ -16879,6 +16895,10 @@ video {
 
   .xl\:font-viga {
     font-family: Viga, sans-serif;
+  }
+
+  .xl\:font-roboto {
+    font-family: Roboto, sans-serif;
   }
 
   .xl\:font-hairline {

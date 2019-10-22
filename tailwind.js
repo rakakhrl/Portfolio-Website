@@ -8,7 +8,8 @@ module.exports = {
       'grey': '#F4F4F4'
     },
     fontFamily: {
-      'viga': ['Viga', 'sans-serif']
+      'viga': ['Viga', 'sans-serif'],
+      'roboto':['Roboto', 'sans-serif']
     },
     extend: {}
   },
