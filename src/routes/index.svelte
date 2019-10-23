@@ -10,7 +10,7 @@
 </script>
 
 <svelte:head>
-	<title>Sapper project template</title>
+	<title>Raka Portfolio Website</title>
 </svelte:head>
 
 

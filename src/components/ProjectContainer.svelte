@@ -1,14 +1,15 @@
 <script>
-    import { slide } from 'svelte/transition';
+    import { fly } from 'svelte/transition';
 
     export let imgSrc;
     export let name;
     export let description;
     export let projectLink;
     export let codeLink;
+    export let index;
 </script>
 
-<div class="flex w-full bg-white shadow-lg mb-8" in:slide="{{duration: 1200}}">
+<div class="flex w-full bg-white shadow-lg mb-8" in:fly="{{x: -1000, duration: 1000 + (400 * index)}}">
     <img src="coding-bg.png" alt="image" class="w-1/4 object-cover"/>
     <div class="px-8 py-4 w-1/2">
         <p class="font-viga text-3xl text-black">Project Name</p>
